@@ -4,7 +4,6 @@
  */
 package models;
 
-import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class statements extends loans {
-    private Integer statementId;
+public class positions extends employees{
+    private Integer positionId;
     private String name;
 }

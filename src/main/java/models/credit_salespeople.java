@@ -13,7 +13,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class statements extends loans {
-    private Integer statementId;
-    private String name;
+public class credit_salespeople extends employees {
+    private Integer salesperonsId;
+    private BigDecimal sales_target;
+    private BigDecimal comission_rate;   
 }
