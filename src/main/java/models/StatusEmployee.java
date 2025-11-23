@@ -4,7 +4,7 @@
  */
 package models;
 
-import java.util.Date;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,14 +12,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "status_employees")
+public class StatusEmployee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "status_id")
+    private Integer id;
 
-public class employees extends Person {
-    
-    private Integer employeeId;
-    private Integer officeId;
-    private Integer positioncId;
-    private Integer statusId;
-    private Date hire_date;
-    
-    
+    private String name;
 }

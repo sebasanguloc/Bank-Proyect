@@ -3,8 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package models;
-
-import java.math.BigDecimal;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,9 +11,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "specialties")
+public class Specialty {
 
-public class credit_salespeople extends employees {
-    private Integer salesperonsId;
-    private BigDecimal sales_target;
-    private BigDecimal comission_rate;   
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "specialty_id")
+    private Integer id;
+
+    private String name;
+
 }

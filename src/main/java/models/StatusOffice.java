@@ -4,6 +4,7 @@
  */
 package models;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "status_offices")
+public class StatusOffice {
 
-public class status_offices extends offices {
-    private Integer statusId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "status_id")
+    private Integer id;
+
     private String name;
+
 }

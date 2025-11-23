@@ -4,7 +4,7 @@
  */
 package models;
 
-import java.math.BigDecimal;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,11 +12,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "installment_status")
+public class InstallmentStatus {
 
-public class collaterals extends loans{
-    private Integer collateralId;
-    private Integer loanId;
-    private Integer typeId;
-    private BigDecimal estimated_value;
-    private String description;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "installment_status_id")
+    private Integer installmentStatusId;
+
+    private String name;
 }

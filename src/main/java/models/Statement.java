@@ -4,6 +4,7 @@
  */
 package models;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "statements")
+public class Statement extends Loan {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "statement_id")
+    private Integer statementId;
 
-public class status_employees extends employees{
-    private Integer statusId;
     private String name;
+
 }
