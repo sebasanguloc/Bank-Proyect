@@ -1,5 +1,6 @@
 package models;
 
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,6 +15,6 @@ public class Customer extends Person{
     private Date birth_date;
     private String address;
     private Integer credit_score;
-    private Date register_date
+    private Date register_date;
     
 }
