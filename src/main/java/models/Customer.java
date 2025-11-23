@@ -10,5 +10,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Customer extends Person{
 
-    // Todo
+    private Integer customerId;
+    private Date birth_date;
+    private String address;
+    private Integer credit_score;
+    private Date register_date
+    
 }
