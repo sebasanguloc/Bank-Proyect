@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "payments")
-public class Payment extends Loan {
+public class Payment{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "collaterals")
-public class Collateral extends Loan {
+public class Collateral{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

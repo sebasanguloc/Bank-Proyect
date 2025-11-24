@@ -6,21 +6,49 @@
 <hibernate-configuration>
     <session-factory>
 
-        <!-- CONEXIÓN -->
+        <!-- ================================
+             CONFIGURACIÓN DE CONEXIÓN
+        ================================= -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mi_db</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bankdb?createDatabaseIfNotExist=true&amp;useSSL=false&amp;serverTimezone=UTC</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.connection.password">root</property>
 
-        <!-- DIALECTO -->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <!-- ================================
+             DIALECTO
+        ================================= -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
-        <!-- OPCIONES -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
-        <property name="show_sql">true</property>
+        <!-- ================================
+             OPCIONES GENERALES
+        ================================= -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <!-- opciones: validate | update | create | create-drop -->
 
-        <!-- ENTIDADES -->
-        <mapping class="Entity.Usuario"/>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
 
+        <!-- Evitar warnings en Hibernate 6 -->
+        <property name="hibernate.jdbc.time_zone">UTC</property>
+
+        <mapping class="models.Collateral"/>
+        <mapping class="models.CreditSalesPeople"/>
+        <mapping class="models.Customer"/>
+        <mapping class="models.Employee"/>
+        <mapping class="models.InstallmentStatus"/>
+        <mapping class="models.Loan"/>
+        <mapping class="models.Office"/>
+        <mapping class="models.Payment"/>
+        <mapping class="models.PaymentMethod"/>
+        <mapping class="models.Person"/>
+        <mapping class="models.Position"/>
+        <mapping class="models.SalespeopleSpecialty"/>
+        <mapping class="models.SalespeopleSpecialtyId"/>
+        <mapping class="models.Specialty"/>
+        <mapping class="models.Statement"/>
+        <mapping class="models.StatusEmployee"/>
+        <mapping class="models.StatusOffice"/>
+        <mapping class="models.Type"/>
+        <mapping class="models.PaymentSchedule"/>
     </session-factory>
 </hibernate-configuration>

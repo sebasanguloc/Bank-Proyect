@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "statements")
-public class Statement extends Loan {
+public class Statement{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "statement_id")

@@ -5,7 +5,7 @@
 package models;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "loans")
-public class Loan extends Customer{
+public class Loan{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,7 @@ public class Loan extends Customer{
 
     @ManyToOne
     @JoinColumn(name = "salesperson_id")
-    private CreditSalesperson salesperson;
+    private CreditSalesPeople salesperson;
 
     @ManyToOne
     @JoinColumn(name = "statement_id")

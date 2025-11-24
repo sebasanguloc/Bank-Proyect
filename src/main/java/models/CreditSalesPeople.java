@@ -4,19 +4,19 @@
  */
 package models;
 
-import java.math.BigDecimal;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "credit_salespeople")
-public class CreditSalesperson {
+public class CreditSalesPeople {
 
     @Id
     @Column(name = "salesperson_id")
@@ -27,9 +27,9 @@ public class CreditSalesperson {
     private Employee employee;
 
     @Column(name = "sales_target")
-    private Double salesTarget;
+    private BigDecimal salesTarget;
 
     @Column(name = "comission_rate")
-    private Double commissionRate;
+    private BigDecimal commissionRate;
 
 }

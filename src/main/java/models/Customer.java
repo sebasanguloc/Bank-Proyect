@@ -1,5 +1,6 @@
 package models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.*;
@@ -24,7 +25,7 @@ public class Customer{
     private Person person;
 
     @Column(name = "birth_date")
-    private Date birthDate;
+    private LocalDate birthDate;
 
     private String address;
 
@@ -32,6 +33,6 @@ public class Customer{
     private Integer creditScore;
 
     @Column(name = "register_date")
-    private Date registerDate;
+    private LocalDate registerDate;
     
 }

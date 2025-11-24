@@ -22,7 +22,7 @@ public class SalespeopleSpecialty {
     @ManyToOne
     @MapsId("salespersonId")
     @JoinColumn(name = "salesperson_id")
-    private CreditSalesperson salesperson;
+    private CreditSalesPeople salesperson;
 
     @ManyToOne
     @MapsId("specialtyId")

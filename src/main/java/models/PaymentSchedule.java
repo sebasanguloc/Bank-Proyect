@@ -16,6 +16,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "payments_schedule")
 public class PaymentSchedule {
 
     @Id

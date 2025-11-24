@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "types")
-public class Type extends Collateral {
+public class Type{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

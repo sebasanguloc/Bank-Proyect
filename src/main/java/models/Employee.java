@@ -4,6 +4,7 @@
  */
 package models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.*;
@@ -39,7 +40,11 @@ public class Employee {
     private StatusEmployee status;
 
     @Column(name = "hire_date")
-    private Date hireDate;
-    
-    
+    private LocalDate hireDate;
+
+    @Column(name = "termination_date")
+    private LocalDate terminationDate;
+
+
+
 }

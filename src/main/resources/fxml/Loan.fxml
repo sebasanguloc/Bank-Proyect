@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="448.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoanController">
+   <children>
+      <Label layoutX="152.0" layoutY="36.0" prefHeight="22.0" prefWidth="95.0" text="Form Loan">
+         <font>
+            <Font name="Yu Gothic Medium" size="18.0" />
+         </font></Label>
+      <Label layoutX="29.0" layoutY="85.0" text="Customer:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="130.0" text="Amount:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="139.0" layoutY="129.0" prefHeight="26.0" prefWidth="240.0" promptText="loan amount" />
+      <Label layoutX="14.0" layoutY="177.0" text="Interest Rate:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtInterestRate" layoutX="139.0" layoutY="176.0" prefHeight="26.0" prefWidth="240.0" />
+      <Label layoutX="24.0" layoutY="216.0" text="Total Fees:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotalFees" layoutX="139.0" layoutY="217.0" prefHeight="26.0" prefWidth="240.0" promptText="term in moths" />
+      <Label layoutX="9.0" layoutY="258.0" text="Amount Owed:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmountOwed" layoutX="139.0" layoutY="259.0" prefHeight="26.0" prefWidth="240.0" />
+      <Label layoutX="31.0" layoutY="300.0" text="Credit SP:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCreateLoan" layoutX="147.0" layoutY="366.0" mnemonicParsing="false" onAction="#createLoan" prefHeight="42.0" prefWidth="105.0" text="Create Loan" />
+      <ComboBox fx:id="CBEmployee" layoutX="139.0" layoutY="300.0" prefHeight="26.0" prefWidth="240.0" promptText="-- credit sales people --" />
+      <ComboBox fx:id="CBCustomer" layoutX="139.0" layoutY="86.0" prefHeight="26.0" prefWidth="240.0" promptText="-- customer --" />
+   </children>
+</AnchorPane>
